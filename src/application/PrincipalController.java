@@ -49,7 +49,7 @@ public class PrincipalController {
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Imagens", "*.jpg", "*.JPG", "*.png",
 				"*.PNG", "*.gif", "*.GIF", "*.bmp", "*.BMP"));
-		fileChooser.setInitialDirectory(new File("C:\\Users\\Gustavo\\Pictures\\Saved Pictures"));
+		fileChooser.setInitialDirectory(new File("imagens\\"));
 		File imgSelec = fileChooser.showOpenDialog(null);
 		try {
 			if (imgSelec != null) {
@@ -66,7 +66,7 @@ public class PrincipalController {
 		if (img2 != null) {
 			FileChooser fileChooser = new FileChooser();
 			fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("imagem", "*.png"));
-			fileChooser.setInitialDirectory((new File("C:\\Users\\Gustavo\\Pictures\\Saved Pictures")));
+			fileChooser.setInitialDirectory((new File("imagens processadas\\")));
 			File file = fileChooser.showSaveDialog(null);
 			if (file != null) {
 				BufferedImage bImg = SwingFXUtils.fromFXImage(img2, null);
